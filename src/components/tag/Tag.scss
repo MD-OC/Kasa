@@ -1,0 +1,32 @@
+@use '../../sass/mixins' as mixins;
+
+.tag {
+
+    padding: 3px 30px 3px 30px;
+
+    border-radius: 10px;
+    border: none;
+    color: #FFF;
+    background-color: #FF6060;
+
+    cursor: pointer;
+
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+
+    @include mixins.mobile {
+
+        padding: 2px 23px 2px 23px;
+        border-radius: 5px;
+
+        font-family: Montserrat;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+    }
+
+}

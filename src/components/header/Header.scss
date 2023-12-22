@@ -1,0 +1,57 @@
+@use '../../sass/mixins' as mixins;
+
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 45px;   
+
+    background-color: #FFF;
+
+    @include mixins.mobile {
+        margin-top: 20px;
+    }
+   
+    &__logo {
+        height: 68px;
+
+        @include mixins.mobile {
+            height: 47px;
+        }
+    }
+}
+
+.navigation {
+    
+    display: flex;
+    gap: 57px;
+    
+    &__link {
+       
+        color: #FF6060;
+        
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 34px;
+        
+        text-decoration: none;
+
+        @include mixins.mobile {
+            font-size: 12px;
+            line-height: 17px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__link.active {
+        text-decoration: underline;
+    }
+
+    @include mixins.mobile {
+        gap: 26px;
+    }
+}
+

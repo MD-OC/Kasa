@@ -1,0 +1,24 @@
+@use '../../sass/mixins' as mixins;
+
+.gallery {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+    padding: 56px 50px 43px 50px;
+    margin: 43px 0 50px 0;
+
+    border-radius: 25px;
+    background-color: #F6F6F6;
+
+    @include mixins.mobile {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+
+        padding: 0 0 0 0;
+        margin: 22px 0 27px 0;
+        background-color: #FFF;
+    }
+
+}

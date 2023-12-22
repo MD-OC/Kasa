@@ -1,0 +1,32 @@
+@use './sass/mixins' as mixins;
+
+body {
+
+    margin: 0 auto;
+       
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-container {
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+    box-sizing: border-box;
+
+    @include mixins.mobile {
+        max-width: 767.98px;
+        padding: 0 20px;
+    }
+
+}

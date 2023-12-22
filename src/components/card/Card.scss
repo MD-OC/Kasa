@@ -1,0 +1,94 @@
+@use '../../sass/mixins' as mixins;
+
+// .cards {
+    
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     column-gap: 60px;
+//     row-gap: 50px;
+
+//     @include mixins.mobile {
+//         grid-template-columns: repeat(1, 1fr);
+//         row-gap: 20px;
+//     }
+
+//     @include mixins.tablet {
+//     }
+
+// }
+
+.card {
+    
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+        
+        &__cover {
+
+            display: flex;
+            width: 100%;
+
+            &::before {
+        
+                content: '';
+            
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
+            
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+        
+            }
+            
+        }
+        
+        &__image {
+
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+
+            @include mixins.mobile {
+                height: 255px;
+            }
+        
+            @include mixins.tablet {
+            }
+            
+        }
+        
+        &__title {
+            
+            position: absolute;
+            top: auto;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1;
+
+            margin: 0;
+            
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 25px;
+            
+            color: #FFF;
+
+            @include mixins.mobile {
+                bottom: 15px;
+            }
+        
+            @include mixins.tablet {
+            }
+            
+        }
+        
+}

@@ -1,0 +1,20 @@
+@use '../../sass/mixins' as mixins;
+
+.rate {
+    
+    display: flex;
+    justify-content: right;
+    gap: 12px;
+
+    @include mixins.mobile {
+        gap: 5px;
+    }
+
+    &__star {
+        width: 28px;
+
+        @include mixins.mobile {
+            width: 16px;
+        }
+    }
+}
